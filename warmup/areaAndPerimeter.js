@@ -14,6 +14,7 @@ const sqrtBaby = (num) => {
 
 const round2 = (value) => Math.round(value * 100) / 100;
 
+// time: O(1) | space: O(1)
 const areaAndPerimeter = (shape, dims) => {
   let area = 0,
     perimeter = 0;
