@@ -30,3 +30,14 @@ const sumByParity = (n, parity) => {
   }
   return sum;
 };
+
+// solution 2: Approach 2: Step by Two
+// time: O(n/2) | space: O(1)
+const sumByParityStepByTwo = (n, parity) => {
+  let sum = 0;
+  const start = parity === "even" ? 2 : 1; // Start from 2 for even, 1 for odd
+  for (let i = start; i <= n; i += 2) {
+    sum += i; // Add the number to the sum
+  }
+  return sum;
+};
