@@ -29,3 +29,9 @@ const countDigits = (n) => {
   }
   return count; // Return the total count of digits
 };
+
+// solution 2: Convert to String
+// time: O(n) | space: O(n)
+const countDigitsString = (n) => {
+  return Math.abs(n).toString().length; // Convert to string and get the length
+};
