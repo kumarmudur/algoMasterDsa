@@ -22,3 +22,9 @@
 const absoluteValue = (n) => {
   return n < 0 ? -n : n;
 };
+
+// solution 2: Bitwise Operation
+// time: O(1) | space: O(1)
+const absoluteValueBitwise = (n) => {
+  return (n ^ (n >> 31)) - (n >> 31);
+};
