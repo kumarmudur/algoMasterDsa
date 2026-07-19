@@ -35,3 +35,10 @@ const countDigits = (n) => {
 const countDigitsString = (n) => {
   return Math.abs(n).toString().length; // Convert to string and get the length
 };
+
+// solution 3: Logarithm
+// time: O(1) | space: O(1)
+const countDigitsLog = (n) => {
+  if (n === 0) return 1; // Special case for zero
+  return Math.floor(Math.log10(Math.abs(n))) + 1; // Use logarithm to count digits
+};
