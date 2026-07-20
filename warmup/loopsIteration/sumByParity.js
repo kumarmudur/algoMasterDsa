@@ -41,3 +41,14 @@ const sumByParityStepByTwo = (n, parity) => {
   }
   return sum;
 };
+
+// solution 3: Approach 3: Mathematical Formula
+// time: O(1) | space: O(1)
+const sumByParityFormula = (n, parity) => {
+  if (parity === "even") {
+    const k = Math.floor(n / 2); // Number of even numbers from 1 to n
+    return k * (k + 1); // Sum of first k even numbers is k * (k + 1)
+  }
+  const k = Math.floor((n + 1) / 2); // Number of odd numbers from 1 to n
+  return k * k; // Sum of first k odd numbers is k^2
+};
