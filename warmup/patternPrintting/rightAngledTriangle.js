@@ -26,3 +26,17 @@ const rightAngledTriangle = (n) => {
   }
   return result;
 };
+
+// solution 2: For Loop
+// time: O(n^2) | space: O(n^2)
+const rightAngledTriangle2 = (n) => {
+  const result = [];
+  for (let i = 1; i <= n; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+      row += "*";
+    }
+    result.push(row);
+  }
+  return result;
+};
