@@ -28,3 +28,24 @@ const interest = (principal, rate, time) => {
   ci = (principal * ((1 * rate) / 100)) ^ (time - principal);
   return [parseFloat(si.toFixed(2)), parseFloat(ci.toFixed(2))]; // Round to two decimal places
 };
+
+// solution 2
+const interest1 = function (principal, rate, time) {
+  let years = Math.trunc(time);
+
+  // Simple interest grows on the principal only
+  let simple = (principal * rate * time) / 100.0;
+
+  // Compound factor: multiply (1 + rate/100) once per year
+  let factor = 1.0;
+  for (let year = 0; year < years; year++) {
+    factor = factor * (1.0 + rate / 100.0);
+  }
+  let compound = principal * factor - principal;
+
+  return [round2(simple), round2(compound)];
+};
+
+function round2(value) {
+  return Math.round(value * 100.0) / 100.0;
+}
