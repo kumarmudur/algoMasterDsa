@@ -36,3 +36,13 @@ const classifyNumber = (n) => {
     return "Zero";
   }
 };
+
+// Solution 2
+/**
+ * @param {number} n
+ * @return {string}
+ */
+// time: O(1) | space: O(1)
+const classifyNumber1 = (n) => {
+  return n > 0 ? "Positive" : n < 0 ? "Negative" : "Zero";
+};
