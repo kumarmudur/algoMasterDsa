@@ -22,3 +22,21 @@
 const isLeapYear = (year) => {
   return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 };
+
+// Solution 2
+/**
+ * @param {number} year
+ * @return {boolean}
+ */
+// time: O(1) | space: O(1)
+const isLeapYear1 = (year) => {
+  if (year % 4 !== 0) {
+    return false;
+  } else if (year % 100 !== 0) {
+    return true;
+  } else if (year % 400 !== 0) {
+    return false;
+  } else {
+    return true;
+  }
+};
