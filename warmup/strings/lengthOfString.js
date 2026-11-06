@@ -23,3 +23,17 @@
 const lengthOfString = (s) => {
   return s.length;
 };
+
+// solution 2: Using for loop
+// time: O(n) | space: O(1)
+/**
+ * @param {string} s
+ * @return {number}
+ */
+const lengthOfStringLoop = (s) => {
+  let count = 0;
+  for (let i = 0; i < s.length; i++) {
+    count++;
+  }
+  return count;
+};
