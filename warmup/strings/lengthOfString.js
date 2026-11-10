@@ -37,3 +37,16 @@ const lengthOfStringLoop = (s) => {
   }
   return count;
 };
+
+// solution 3: Using recursion
+// time: O(n) | space: O(n)
+/**
+ * @param {string} s
+ * @return {number}
+ */
+const lengthOfStringRecursion = (s) => {
+  if (s === "") {
+    return 0;
+  }
+  return 1 + lengthOfStringRecursion(s.slice(1));
+};
