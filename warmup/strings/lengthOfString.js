@@ -50,3 +50,13 @@ const lengthOfStringRecursion = (s) => {
   }
   return 1 + lengthOfStringRecursion(s.slice(1));
 };
+
+// solution 4: Using reduce
+// time: O(n) | space: O(1)
+/**
+ * @param {string} s
+ * @return {number}
+ */
+const lengthOfStringReduce = (s) => {
+  return [...s].reduce((count) => count + 1, 0);
+};
